@@ -69,10 +69,10 @@ function addStyles() {
             position: fixed;
             right: 10px;
         }
-        .deng-box1 { position: fixed; top: 15px; left: 20px; }
-        .deng-box2 { position: fixed; top: 12px; left: 130px; }
-        .deng-box3 { position: fixed; top: 10px; right: 130px; }
-        .deng-box4 { position: fixed; top: 10px; right: 20px; }
+        .deng-box1 { position: fixed; top: 20px; left: 20px; }
+        .deng-box2 { position: fixed; top: 20px; left: 130px; }
+        .deng-box3 { position: fixed; top: 20px; right: 130px; }
+        .deng-box4 { position: fixed; top: 20px; right: 20px; }
 
         .deng {
             position: relative;
