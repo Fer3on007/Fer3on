@@ -1,58 +1,62 @@
-
-function createDengContainer() {
+ // 张苹果博客：https://zhangpingguo.com/
+ // 创建并添加元素
+ function createDengContainer() {
     const container = document.createElement('div');
     container.className = 'deng-container';
- 
+
+    // 从当前脚本的 URL 获取参数
     const scriptSrc = document.currentScript.src;
-    const urlParams = new URLSearchParams(scriptSrc.split('?')[1]); 
-    const customText = urlParams.get('text'); 
- 
+    const urlParams = new URLSearchParams(scriptSrc.split('?')[1]); // 获取 '?'
+    const customText = urlParams.get('text'); // 获取参数名为'text'的值
+
+    // 将获取的文本分割为字符数组，如果没有提供文本，则使用默认的“新年快乐”
     const texts = customText ? customText.split('') : ['新', '年', '快', '乐'];
- 
+
     texts.forEach((text, index) => {
         const box = document.createElement('div');
         box.className = `deng-box deng-box${index + 1}`;
- 
+
         const deng = document.createElement('div');
         deng.className = 'deng';
- 
+
         const xian = document.createElement('div');
         xian.className = 'xian';
- 
+
         const dengA = document.createElement('div');
         dengA.className = 'deng-a';
- 
+
         const dengB = document.createElement('div');
         dengB.className = 'deng-b';
- 
+
         const dengT = document.createElement('div');
         dengT.className = 'deng-t';
         dengT.textContent = text;
- 
+
         dengB.appendChild(dengT);
         dengA.appendChild(dengB);
         deng.appendChild(xian);
         deng.appendChild(dengA);
- 
+
         const shuiA = document.createElement('div');
         shuiA.className = 'shui shui-a';
- 
+
         const shuiC = document.createElement('div');
         shuiC.className = 'shui-c';
         const shuiB = document.createElement('div');
         shuiB.className = 'shui-b';
- 
+
         shuiA.appendChild(shuiC);
         shuiA.appendChild(shuiB);
         deng.appendChild(shuiA);
         box.appendChild(deng);
         container.appendChild(box);
     });
- 
+
     document.body.appendChild(container);
- }
- 
- function addStyles() {
+}
+
+// 添加CSS样式
+function addStyles() {
     const style = document.createElement('style');
     style.type = 'text/css';
     style.textContent = `
@@ -69,7 +73,9 @@ function createDengContainer() {
         }
         .deng-box1 { position: fixed; top: 15px; left: 20px; }
         .deng-box2 { position: fixed; top: 12px; left: 130px; }
-        .deng-box3 { position: fixed; top: 10px; right: 110px; }
+        .deng-box3 { position: fixed; top: 10px; right: 130px; }
+        .deng-box4 { position: fixed; top: 10px; right: 20px; }
+
         .deng {
             position: relative;
             width: 120px;
@@ -169,11 +175,13 @@ function createDengContainer() {
         }
     `;
     document.head.appendChild(style);
- }
- 
- function init() {
+}
+
+// 引入时调用
+function init() {
     addStyles();
     createDengContainer();
- }
- 
- init();
+}
+
+// 调用初始化函数
+init();
