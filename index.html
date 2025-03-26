@@ -11,15 +11,20 @@
             padding: 0;
         }
         .container {
-            width: 80%;
+            width: 100%;
             max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
+            margin: 0px auto;
+            padding: 5px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* 添加相对定位 */
         }
         h1 {
+            text-align: center;
+            color: #333333;
+        }
+        h2 {
             text-align: center;
             color: #333333;
         }
@@ -49,17 +54,52 @@
         a:hover {
             background-color: #0056b3;
         }
-        .disclaimer {
-            margin-top: 20px;
+        .disclaimer {   
+            margin-top: 15px;   
             background-color: #f9f9f9;
             padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 10px;
         }
+        .sidebar {
+            width: 200px;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed; /* 固定定位 */
+            right: 20px; /* 距离右侧20px */
+            top: 20px; /* 距离顶部20px */
+            z-index: 10; /* 确保在页面上方 */
+        }
+        .sidebar h4 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .sidebar {
+    width: 230px;
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* 固定定位 */
+    right: 20px; /* 距离右侧20px */
+    top: 200px; /* 距离顶部50px */
+    z-index: 10; /* 确保在页面上方 */
+    word-wrap: break-word; /* 允许长单词或无法使用断点的URL强制换行 */
+    overflow-wrap: break-word; /* 同上，兼容性更好 */
+}
+
+.sidebar h4, .sidebar p {
+    margin: 0 0 10px 0; /* 添加一些间距 */
+    word-wrap: break-word; /* 确保标题和段落中的文字也会自动换行 */
+    overflow-wrap: break-word; /* 同上 */
+}
     </style>
 </head>
 <body>
-    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js"></script>    
+    <script src="<url id="cvhudlmg0jb0ou9lvgmg" type="url" status="failed" title="" wc="0">https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js</url> "></script>    
     <script src="./css.js?text=欢迎使用"> </script>
     <div class="container">
         <h1>Fer3on官网</h1>
@@ -76,7 +116,13 @@
         <h3>当前版本：2.0 免费公益(未检测)</h3>
         <h3>QQ交流群：962874200</h3>
         <a href="./SSJJ-Fer3on2.0.zip">点击下载软件</a>
-        <a href="https://qm.qq.com/q/SkZW1WOawA">点击链接加入QQ群聊</a>
+        <a href="<url id="cvhudlmg0jb0ou9lvgn0" type="url" status="parsed" title="正在跳转" wc="309">https://qm.qq.com/q/SkZW1WOawA</url> ">点击链接加入QQ群聊</a>
+    </div>
+    <div class="sidebar">
+        <h4>提示栏</h4>
+        <p>欢迎来到Fer3on官网！</p>
+        <p>如果下载失败,请到蓝奏网盘下载:https://wwlc.lanzouu.com/b00hqpcoab
+            密码:GYRJ</p>
     </div>
 </body>
 </html>
