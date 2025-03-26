@@ -7,18 +7,20 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
         }
         .container {
             width: 100%;
             max-width: 800px;
             margin: 0px auto;
-            padding: 5px;
+            padding: 20px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative; 
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 100%;
         }
         h1 {
             text-align: center;
@@ -55,22 +57,11 @@
             background-color: #0056b3;
         }
         .disclaimer {   
-            margin-top: 15px;   
+            margin-top: 20px;   
             background-color: #f9f9f9;
             padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: fixed; 
-            right: 20px; 
-            top: 20px; 
-            z-index: 10; 
+            border-radius: 5px;
         }
         .sidebar h4 {
             color: #333333;
@@ -78,28 +69,29 @@
         }
 
         .sidebar {
-    width: 230px;
-    background-color: #e9ecef;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: fixed; 
-    right: 20px; 
-    top: 200px;
-    z-index: 10; 
-    word-wrap: break-word; 
-    overflow-wrap: break-word;
-}
+            width: 240px;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed; 
+            right: 0px; 
+            top: 200px;
+            z-index: 10; 
+            word-wrap: break-word; 
+            overflow-wrap: break-word; 
+        }
 
 .sidebar h4, .sidebar p {
-    margin: 0 0 10px 0; 
+    margin: 0 0 10px 0;
     word-wrap: break-word; 
     overflow-wrap: break-word; 
 }
     </style>
 </head>
 <body>
-    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>      <script src="./css.js?text=欢迎使用"> </script>
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>    
+    <script src="./css.js?text=欢迎使用"> </script>
     <div class="container">
         <h1>Fer3on官网</h1>
         <div class="disclaimer">
