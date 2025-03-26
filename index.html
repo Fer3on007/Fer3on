@@ -18,29 +18,44 @@
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-repeat: no-repeat;
-            background-position: right top;
-            background-size: 100%;
+            background-image: url('123.jpg');
+            background-size: 100%; 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            z-index: 1;
+        }
+        .disclaimer {   
+            margin-top: 20px;   
+            background-color: #020000;
+            padding: 10px;
+            /* border: 0px solid #ffffff; */
+            border-radius: 50px;
+            opacity: 1; /* 默认透明度为100% */
         }
         h1 {
+            color: #ffffff;
             text-align: center;
-            color: #333333;
+         
         }
         h2 {
             text-align: center;
-            color: #333333;
+            color: #ffffff;
         }
         h3 {
-            color: #555555;
+            color: #ffffff;
         }
         h4 {
-            color: #666666;
+            color: #ffffff;
             line-height: 1.5;
         }
         ul {
+            color: #ffffff;
             padding-left: 20px;
         }
         ul li {
+            color: #ffffff;
+
             line-height: 2;
         }
         a {
@@ -56,15 +71,8 @@
         a:hover {
             background-color: #0056b3;
         }
-        .disclaimer {   
-            margin-top: 20px;   
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
         .sidebar h4 {
-            color: #333333;
+            color: #000000;
             margin-bottom: 10px;
         }
 
@@ -78,19 +86,55 @@
             right: 0px; 
             top: 200px;
             z-index: 10; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .sidebar h4, .sidebar p {
+            margin: 0 0 10px 0; 
             word-wrap: break-word; 
             overflow-wrap: break-word; 
         }
+        .control-panel {
+            width: 200px;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            left: 20px;
+            top: 200px;
+            z-index: 10;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .control-panel button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .control-panel button:hover {
+            background-color: #0056b3;
+        }
 
-.sidebar h4, .sidebar p {
-    margin: 0 0 10px 0;
-    word-wrap: break-word; 
-    overflow-wrap: break-word; 
-}
+        .control-panel .opacity-control {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .control-panel .opacity-control label {
+            margin-right: 10px;
+        }
+
+
     </style>
 </head>
 <body>
-    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>    
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>     
     <script src="./css.js?text=欢迎使用"> </script>
     <div class="container">
         <h1>Fer3on官网</h1>
@@ -114,5 +158,40 @@
         <p>如果下载失败,请到蓝奏网盘下载:https://wwlc.lanzouu.com/b00hqpcoab
             密码:GYRJ</p>
     </div>
+
+    <div class="control-panel">
+        <button id="toggleBackground">切换背景</button>
+        <div class="opacity-control">
+            <label for="opacityRange">透明度:</label>
+            <input type="range" id="opacityRange" min="0" max="1" step="0.01" value="1">
+        </div>
+    </div>
+    <script>
+    
+        const disclaimer = document.querySelector('.disclaimer');
+        const toggleButton = document.getElementById('toggleBackground');
+        const opacityRange = document.getElementById('opacityRange');
+
+       
+        let hasBackground = true;
+        toggleButton.addEventListener('click', () => {
+            if (hasBackground) {
+                disclaimer.style.backgroundColor = 'transparent';
+                toggleButton.textContent = '显示背景';
+                hasBackground = false;
+            } else {
+                disclaimer.style.backgroundColor = '#020000';
+                toggleButton.textContent = '隐藏背景';
+                hasBackground = true;
+            }
+        });
+
+       
+        opacityRange.addEventListener('input', () => {
+            disclaimer.style.opacity = opacityRange.value;
+        });
+ 
+    </script>
+    </script>
 </body>
 </html>
