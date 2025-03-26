@@ -1,16 +1,15 @@
- // 张苹果博客：https://zhangpingguo.com/
- // 创建并添加元素
+
  function createDengContainer() {
     const container = document.createElement('div');
     container.className = 'deng-container';
 
-    // 从当前脚本的 URL 获取参数
+   
     const scriptSrc = document.currentScript.src;
-    const urlParams = new URLSearchParams(scriptSrc.split('?')[1]); // 获取 '?'
-    const customText = urlParams.get('text'); // 获取参数名为'text'的值
+    const urlParams = new URLSearchParams(scriptSrc.split('?')[1]); 
+    const customText = urlParams.get('text'); 
 
-    // 将获取的文本分割为字符数组，如果没有提供文本，则使用默认的“新年快乐”
-    const texts = customText ? customText.split('') : ['新', '年', '快', '乐'];
+  
+    const texts = customText ? customText.split('') : ['欢', '迎', '使', '用'];
 
     texts.forEach((text, index) => {
         const box = document.createElement('div');
@@ -55,7 +54,6 @@
     document.body.appendChild(container);
 }
 
-// 添加CSS样式
 function addStyles() {
     const style = document.createElement('style');
     style.type = 'text/css';
@@ -177,11 +175,10 @@ function addStyles() {
     document.head.appendChild(style);
 }
 
-// 引入时调用
+
 function init() {
     addStyles();
     createDengContainer();
 }
 
-// 调用初始化函数
 init();
