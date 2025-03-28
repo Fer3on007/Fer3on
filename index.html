@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>生死狙击-Fer3on</title>
@@ -9,58 +10,113 @@
             background-color: #f4f4f4;
             margin: 0px;
             padding: 0px;
+            min-width: 320px;
+      
+            min-height: 100vh;
+           
+            display: flex;
         }
+
         .container {
-            width: 100%;
-            max-width: 800px;
+            width: 200%;
+            max-width: 70%;
             margin: 0px auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* background-image: url("https://i.bobopic.com/small/99529664.jpg"); */
             background-image: url('123.jpg');
-            background-size: 100%; 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
+            /* background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 100%; */
+
+            background-size: cover;
+         
+            background-position: center;
+            
+            background-repeat: no-repeat;
+          
             z-index: 1;
         }
-        .disclaimer {   
-            margin-top: 20px;   
+
+        .disclaimer {
+            margin-top: 1%;
+            margin-left: 2vw;
+        
+            margin-right: 2vw;
+    
             background-color: #020000;
             padding: 10px;
-            /* border: 0px solid #ffffff; */
-            border-radius: 50px;
-            opacity: 1; /* 默认透明度为100% */
+         
+            border-radius: 20px;
+         
+            opacity: 1;
+        
         }
+
+        .disclaimer2 {
+            margin-top: 1%;
+            margin-left: 2vw;
+         
+            margin-right: 2vw;
+        
+            background-color: #000000;
+            padding: 10px;
+          
+            border-radius: 20px;
+        
+            opacity: 1;
+          
+        }
+
+        .a1 {
+            margin-top: 2%;
+            margin-left: 10%;
+          
+         
+        }
+
         h1 {
             color: #ffffff;
             text-align: center;
-         
+
         }
+
         h2 {
             text-align: center;
             color: #ffffff;
         }
+
         h3 {
+        
+            margin-left: 4vw;
+          
+            margin-right: 4vw;
+        
             color: #ffffff;
         }
+
         h4 {
             color: #ffffff;
             line-height: 1.5;
         }
+
         ul {
             color: #ffffff;
             padding-left: 20px;
         }
+
         ul li {
             color: #ffffff;
 
             line-height: 2;
         }
+
         a {
+
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 2%;
             padding: 10px 20px;
             background-color: #007bff;
             color: #ffffff;
@@ -68,9 +124,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
+
         a:hover {
             background-color: #0056b3;
         }
+
         .sidebar h4 {
             color: #000000;
             margin-bottom: 10px;
@@ -82,19 +140,32 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: fixed; 
-            right: 0px; 
+            position: fixed;
+        
+            right: 0px;
+      
             top: 200px;
-            z-index: 10; 
+         
+            z-index: 10;
+           
             word-wrap: break-word;
+        
             overflow-wrap: break-word;
+         
+            cursor: pointer;
+          
         }
 
-        .sidebar h4, .sidebar p {
-            margin: 0 0 10px 0; 
-            word-wrap: break-word; 
-            overflow-wrap: break-word; 
+        .sidebar h4,
+        .sidebar p {
+            margin: 0 0 10px 0;
+          
+            word-wrap: break-word;
+            
+            overflow-wrap: break-word;
+            
         }
+
         .control-panel {
             width: 200px;
             background-color: #e9ecef;
@@ -107,7 +178,9 @@
             z-index: 10;
             word-wrap: break-word;
             overflow-wrap: break-word;
+
         }
+
         .control-panel button {
             margin: 5px;
             padding: 10px 20px;
@@ -117,6 +190,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         .control-panel button:hover {
             background-color: #0056b3;
         }
@@ -126,32 +200,46 @@
             align-items: center;
             margin-top: 10px;
         }
+
         .control-panel .opacity-control label {
             margin-right: 10px;
         }
-
-
     </style>
 </head>
+
 <body>
-    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>     
+    <script src="https://fastly.jsdelivr.net/npm/live2d-widgets@0/autoload.js "></script>
     <script src="./css.js?text=欢迎使用"> </script>
     <div class="container">
         <h1>Fer3on官网</h1>
         <div class="disclaimer">
             <h4>免责声明</h4>
             <ul>
-                <li>本软件仅为游戏辅助工具，并非改变游戏数据类软件，也不会收集任何用户数据。严禁利用本软件侵犯他人隐私权。如软件使用者不能遵守此规定，请立即删除。对于因用户使用本软件而造成自身或他人隐私泄露等任何不良后果，均由用户自行承担，软件作者不负任何责任。</li>
-                <li>软件保证不含任何病毒、木马等破坏用户数据的恶意代码。但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品，软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。</li>
+                <li>本软件仅为游戏辅助工具，并非改变游戏数据类软件，也不会收集任何用户数据。严禁利用本软件侵犯他人隐私权。如软件使用者不能遵守此规定，请立即删除。对于因用户使用本软件而造成自身或他人隐私泄露等任何不良后果，均由用户自行承担，软件作者不负任何责任。
+                </li>
+                <li>软件保证不含任何病毒、木马等破坏用户数据的恶意代码。但是由于本软件产品可以通过网络等途径下载、传播，对于从非软件作者指定站点下载的本软件产品，软件作者无法保证该软件是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序或者黑客软件，不承担由此引起的直接和间接损害责任。
+                </li>
                 <li>软件会不断更新，以便及时为用户提供新功能和修正软件中的BUG。同时软件作者保证本软件在升级过程中也不含有任何旨在破坏用户计算机数据的恶意代码。</li>
                 <li>由于用户计算机软硬件环境的差异性和复杂性，本软件所提供的各项功能并不能保证在任何情况下都能正常执行或达到用户所期望的结果。用户使用本软件所产生的一切后果，软件作者不承担任何责任。</li>
                 <li>如果用户自行下载运行本软件，即表明用户信任软件作者，自愿选择安装本软件，并接受本协议所有条款。如果用户不接受本协议，请立即删除。</li>
             </ul>
         </div>
-        <h3>当前版本：2.1 免费公益(未检测) <--> 已更新</h3>
-        <h3>QQ交流群：962874200 </h3>
-        <a href="./SSJJ-Fer3on公益免费_2.1.zip">点击下载软件</a>
-        <a href="https://qm.qq.com/q/SkZW1WOawA ">点击链接加入QQ群聊</a>    </div>
+
+        <div class="disclaimer2">
+            <h3>当前版本：2.0 免费公益(未检测)</h3>
+            <h3>QQ交流群：962874200     ←←加入群聊提前获取信息版本</h3>
+        </div>
+
+        <div class="a1">
+            <a href="./SSJJ-Fer3on2.0.zip">点击下载软件</a>
+            <a href="https://qm.qq.com/q/SkZW1WOawA ">点击链接加入QQ群聊</a>
+            <a href="https://wwlc.lanzouu.com/b00hqpcoab ">蓝奏网盘下载地址[密码:GYRJ]</a>
+
+        </div>
+    </div>
+
+
+
     <div class="sidebar">
         <h4>提示栏</h4>
         <p>欢迎来到Fer3on官网！</p>
@@ -167,31 +255,68 @@
         </div>
     </div>
     <script>
-    
+       
         const disclaimer = document.querySelector('.disclaimer');
         const toggleButton = document.getElementById('toggleBackground');
         const opacityRange = document.getElementById('opacityRange');
 
-       
+        const disclaimer2 = document.querySelector('.disclaimer2');
+
+        const sidebar = document.getElementById('sidebar');
+        const controlPanel = document.getElementById('control-panel');
+     
         let hasBackground = true;
         toggleButton.addEventListener('click', () => {
             if (hasBackground) {
                 disclaimer.style.backgroundColor = 'transparent';
+                disclaimer2.style.backgroundColor = 'transparent';
                 toggleButton.textContent = '显示背景';
                 hasBackground = false;
             } else {
                 disclaimer.style.backgroundColor = '#020000';
+                disclaimer2.style.backgroundColor = '#020000';
+
                 toggleButton.textContent = '隐藏背景';
                 hasBackground = true;
             }
         });
 
-       
+     
         opacityRange.addEventListener('input', () => {
             disclaimer.style.opacity = opacityRange.value;
+            disclaimer2.style.opacity = opacityRange.value;
         });
- 
-    </script>
+        
+        function makeDraggable(element) {
+            let isDragging = false;
+            let offsetX, offsetY;
+
+            element.addEventListener('mousedown', (e) => {
+               
+                if (e.target.id === 'opacityRange' || e.target.parentNode.id === 'opacityRange') {
+                    return; 
+                }
+                isDragging = true;
+                offsetX = e.clientX - element.getBoundingClientRect().left;
+                offsetY = e.clientY - element.getBoundingClientRect().top;
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    element.style.left = `${e.clientX - offsetX}px`;
+                    element.style.top = `${e.clientY - offsetY}px`;
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        }
+
+       
+        makeDraggable(document.querySelector('.sidebar'));
+        makeDraggable(document.querySelector('.control-panel'));
     </script>
 </body>
+
 </html>
